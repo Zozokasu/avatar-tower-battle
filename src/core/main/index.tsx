@@ -1,4 +1,4 @@
-import { Main } from "./samples/mineSweeper";
+import { Main } from "./samples/matter";
 
 export const App = () => {
   return <Main />;
