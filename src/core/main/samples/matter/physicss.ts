@@ -11,7 +11,8 @@ export class MatterPhysics {
     y: number,
     width: number,
     height: number,
-    isStatic?: boolean
+    isStatic?: boolean,
+    angle: number = 0
   ) {
     const box = Matter.Bodies.rectangle(
       x * WORLD_SCALE,
@@ -20,6 +21,7 @@ export class MatterPhysics {
       height * WORLD_SCALE,
       {
         isStatic: isStatic,
+        angle: angle,
       }
     );
     Matter.Composite.add(this.engine.world, box);
@@ -34,12 +36,21 @@ export class MatterPhysics {
       x * WORLD_SCALE,
       -y * WORLD_SCALE,
       radius * WORLD_SCALE,
-      { isStatic: isStatic }
+      { isStatic: isStatic, friction: 0.5 }
     );
     Matter.Composite.add(this.engine.world, sphere);
     this.matterObjects.push(
       new matterObject(sphere.id, { type: "circle", radius })
     );
+  }
+
+  addForce(bodyId: number, force: { x: number; y: number }) {
+    const body = Matter.Composite.get(
+      this.engine.world,
+      bodyId,
+      "body"
+    ) as Body;
+    Matter.Body.applyForce(body, body.position, force);
   }
 
   update(deltaTime: number) {

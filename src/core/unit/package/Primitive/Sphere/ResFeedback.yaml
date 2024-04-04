@@ -260,7 +260,7 @@ Children:
         Active:
           ID: "?"
           Data: true
-        ID: "?"
+        ID: ID:DV/Props:0
         Persistent-Id: "?"
         Position:
           ID: "?"
@@ -305,7 +305,7 @@ Children:
                   Data: Props.position
                 TargetField:
                   ID: "?"
-                  Data: null
+                  Data: ID:Sphere:Tag:2
                 OverrideOnLink:
                   ID: "?"
                   Data: false
@@ -324,7 +324,7 @@ Children:
                   Data: Props.rotation
                 TargetField:
                   ID: "?"
-                  Data: null
+                  Data: ID:Sphere:Tag:3
                 OverrideOnLink:
                   ID: "?"
                   Data: false
@@ -343,10 +343,29 @@ Children:
                   Data: Props.radius
                 TargetField:
                   ID: "?"
-                  Data: null
+                  Data: ID:Sphere:Components:FrooxEngine.SphereMesh:Radius:0
                 OverrideOnLink:
                   ID: "?"
                   Data: false
+            - Type: FrooxEngine.GizmoLink
+              Data:
+                ID: "?"
+                persistent-ID: "?"
+                UpdateOrder:
+                  ID: "?"
+                  Data: 0
+                Enabled:
+                  ID: "?"
+                  Data: true
+                _worker:
+                  ID: "?"
+                  Data: ID:DV/Props:0
+                _gizmo:
+                  ID: "?"
+                  Data: null
+                _type:
+                  ID: "?"
+                  Data: FrooxEngine.SlotGizmo
         Children: []
       - Name:
           ID: "?"
@@ -357,13 +376,13 @@ Children:
         ID: ID:Sphere:0
         Persistent-Id: "?"
         Position:
-          ID: "?"
+          ID: ID:Sphere:Tag:2
           Data:
             - 0
             - 0
             - 0
         Rotation:
-          ID: "?"
+          ID: ID:Sphere:Tag:3
           Data:
             - 0
             - 0
@@ -429,7 +448,7 @@ Children:
                 UVScale:
                   ID: "?"
                   Data:
-                    - 333.3333333333333
+                    - -333.3333333333333
                     - 333.3333333333333
                 DualSided:
                   ID: "?"
